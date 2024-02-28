@@ -5,13 +5,20 @@ import { useContext } from "react";
 import { store } from "../context/ContextApp";
 
 const AlphabetsButton = () => {
-  const { menuAlphabets, setMenuAlphabets } = useContext(store);
+  const { menuAlphabets, setMenuAlphabets, createArrays } = useContext(store);
 
   const onClick = () => {
     setMenuAlphabets(true);
+    // createArrays();
   };
 
-  return <Button title={"ALFABETOS"} icon="bi bi-chat-square-text-fill" />;
+  return (
+    <Button
+      title={"ALFABETOS"}
+      icon="bi bi-chat-square-text-fill"
+      onClick={onClick}
+    />
+  );
 };
 
 export default AlphabetsButton;

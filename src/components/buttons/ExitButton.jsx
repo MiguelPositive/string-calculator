@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { store } from "../context/ContextApp";
 
 import Button from "./Button";
 
 const ExitButton = () => {
+  const { setMenuAlphabets } = useContext(store);
+
+  const handleClick = () => {
+    setMenuAlphabets(null);
+  };
+
   return (
     <div className="relative">
-      <Button title={"SALIR"} icon={"bi bi-box-arrow-right"}/>
+      <Button
+        title={"SALIR"}
+        icon={"bi bi-box-arrow-right"}
+        onClick={handleClick}
+      />
       {/* <img
         src="./src/assets/imgs/exit.png"
         alt=""
