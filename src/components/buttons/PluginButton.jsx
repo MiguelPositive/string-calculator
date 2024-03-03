@@ -29,7 +29,7 @@ const PluginButton = () => {
   };
 
   useEffect(() => {
-    if (group1 && group2 && complement) {
+    if (group1 && group2 && activeComplement) {
       joinStrings();
       complement();
     }

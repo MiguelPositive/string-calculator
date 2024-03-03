@@ -8,7 +8,14 @@ import Output from "../../outputs/Output";
 import OptionsMenu from "../menus/GeneralMenu";
 
 const Dashboard = () => {
-  const { setInputValue1, setInputValue2 ,group1, group2 } = useContext(store);
+  const {
+    setInputValue1,
+    inputValue1,
+    setInputValue2,
+    inputValue2,
+    group1,
+    group2,
+  } = useContext(store);
 
   const handleChangeGroup1 = (e) => {
     setInputValue1(e.target.value);
@@ -17,9 +24,6 @@ const Dashboard = () => {
   const handleChangeGroup2 = (e) => {
     setInputValue2(e.target.value);
   };
-
-
-  
 
   // useEffect(() => {
   //   console.log(group1);
@@ -32,8 +36,8 @@ const Dashboard = () => {
         <h1 className="text-center mb-4">CALCULADORA DE CARÁCTERES</h1>
 
         <div className="w-full flex flex-col gap-4 ">
-          <Input handleChange={handleChangeGroup1} />
-          <Input handleChange={handleChangeGroup2} />
+          <Input handleChange={handleChangeGroup1} value={inputValue1} />
+          <Input handleChange={handleChangeGroup2} value={inputValue2} />
           <Output />
           <OptionsMenu />
         </div>

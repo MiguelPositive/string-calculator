@@ -1,13 +1,13 @@
 import React from "react";
 
-const Input = ({handleChange}) => {
+const Input = ({handleChange, value}) => {
 
   
   return (
     <input
       type="text"
       placeholder="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-      className="w-full pl-2 pr-2 h-[calc(1.2rem+1.2em)] text-[#292C31] rounded-md outline-none border-[2px] border-[#2892F3]" onChange={handleChange}
+      className="w-full pl-2 pr-2 h-[calc(1.2rem+1.2em)] text-[#292C31] rounded-md outline-none border-[2px] border-[#2892F3]" value={value ? value : ""} onChange={handleChange}
     />
   );
 };
